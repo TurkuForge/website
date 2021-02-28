@@ -1,11 +1,10 @@
 <script lang="ts" xmlns="http://www.w3.org/1999/html">
-    import {SvelteComponent} from "svelte";
-    export let logo: String | SvelteComponent;
-
+    let clazz: String;
+    export { clazz as class };
     let open = false;
 </script>
 
-<nav class="bg-gray-800">
+<nav class={`${clazz || ''}`}>
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div class="relative flex items-center justify-between h-16">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -24,7 +23,6 @@
                 </button>
             </div>
             <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div class="flex-shrink-0 flex items-center text-white">{logo ?? ''}</div>
                 <div class="hidden sm:block sm:ml-6">
                     <div class="flex space-x-4">
                         <slot name="items" />

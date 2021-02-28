@@ -1,7 +1,7 @@
-html, body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	padding: 0;
-	margin: 0;
+html {
+    scroll-behavior: smooth;
+}
+
+.h-double-screen {
+    height: 200vh;
 }
