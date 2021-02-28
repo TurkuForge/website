@@ -10,16 +10,19 @@
     let data: Array<GithubResponse> = [];
 
     let locale = navigator.language || 'en-US';
-    function prettyDate( date: Date | string ) {
-        if ( typeof date === "string" ) {
-            date = new Date( date );
+
+    function prettyDate(date: Date | string) {
+        if (typeof date === "string") {
+            date = new Date(date);
         }
-        let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        return date.toLocaleDateString( locale, options )
+        let options = {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
+        return date.toLocaleDateString(locale, options)
     }
 
     fetch(githubRepos)
-        .then(async (response) => { data = await response.json(); console.log(data); })
+        .then(async (response) => {
+            data = await response.json();
+        })
         .catch((err) => console.error(err))
 </script>
 <div class="sticky top-0 left-0 h-16 bg-brand-blue-dark z-10"></div>

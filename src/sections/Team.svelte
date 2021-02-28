@@ -22,7 +22,6 @@
                 member.json()
                     .then((content) => {
                         data = data.concat([content]);
-                        console.log(data);
                     });
             });
         })

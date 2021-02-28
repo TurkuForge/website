@@ -93,7 +93,16 @@ if (!production) {
 		serve(),
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
-		livereload('dist'),
+		livereload({
+			watch: 'public',
+			verbose: false, // Disable console output
+
+			// other livereload options
+			https: {
+				key: fs.readFileSync('cert/dev-server.key'),
+				cert: fs.readFileSync('cert/dev-server.crt')
+			}
+		})
 	]
 }
 else {

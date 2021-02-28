@@ -14,10 +14,20 @@
         TEAM: 'team'
     }
     const currentYear = new Date().getFullYear()
+
+    let scrollY = 0;
+    $: {
+        document.querySelectorAll( 'body > section' )?.forEach( ( element: HTMLSelectElement ) => {
+            if ( scrollY >= element.offsetTop - 20 ) {
+                activeNavItem = element.id
+            }
+        } );
+    }
 </script>
+<svelte:window bind:scrollY={scrollY}/>
 <NavBar class="fixed z-20 w-full">
     <div slot="items">
-        <NavItem href="#hero" active={ activeNavItem === menuItems.HOME }
+        <NavItem href="#home" active={ activeNavItem === menuItems.HOME }
                  on:itemClick={() => activeNavItem = menuItems.HOME }>Home
         </NavItem>
         <NavItem href="#about" active={ activeNavItem === menuItems.ABOUT }
@@ -31,7 +41,7 @@
         </NavItem>
     </div>
 </NavBar>
-<section id="hero" class="h-screen w-full relative flex">
+<section id="home" class="h-screen w-full relative flex">
     <Hero/>
 </section>
 <section id="about" class="min-h-screen w-full relative bg-brand-light">
