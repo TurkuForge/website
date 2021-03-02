@@ -1,7 +1,6 @@
 <script lang="ts">
     import AboutUs from '../content/ABOUT_US.md'
 </script>
-<div class="sticky top-0 left-0 h-16 bg-brand-blue-dark z-10"></div>
 <div class="relative bg-white">
     <div class="lg:absolute lg:inset-0">
         <div class="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">

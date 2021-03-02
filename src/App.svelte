@@ -25,7 +25,7 @@
     }
 </script>
 <svelte:window bind:scrollY={scrollY}/>
-<NavBar class="fixed z-20 w-full">
+<NavBar class="fixed z-20 w-full bg-brand-blue-dark">
     <div slot="items">
         <NavItem href="#home" active={ activeNavItem === menuItems.HOME }
                  on:itemClick={() => activeNavItem = menuItems.HOME }>Home
