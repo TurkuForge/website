@@ -25,12 +25,11 @@
         })
         .catch((err) => console.error(err))
 </script>
-<div class="sticky top-0 left-0 h-16 bg-brand-blue-dark z-10"></div>
 <div class="max-w-7xl overflow-hidden m-auto">
-    <ul class="py-4 space-y-2 sm:px-6 sm:space-y-4 lg:px-8">
-        <h1 class="text-2xl bold pb-4">Our Active Projects</h1>
+    <ul class="py-10 space-y-2 sm:px-6 sm:space-y-4 lg:px-8">
+        <h1 class="text-2xl bold pb-4 mx-2 sm:mx-0">Our Active Projects</h1>
         {#each data as repository}
-            <li class="bg-white px-4 py-6 shadow sm:rounded-lg sm:px-6">
+            <li class="bg-white px-4 mx-2 py-6 sm:mx-0 shadow rounded-lg sm:px-6">
                 <a href={repository.html_url} target="_blank" alt="link to repository">
                     <div class="sm:flex sm:justify-between sm:items-baseline">
                         <h3 class="text-base font-medium bold">

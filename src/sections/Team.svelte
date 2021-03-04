@@ -1,10 +1,4 @@
 <script lang="ts">
-    interface GithubTeamResponse {
-        name: string;
-        avatar_url: string;
-        bio: string;
-    }
-
     const githubTeam = 'https://api.github.com/orgs/TurkuForge/public_members';
     let data = [];
     fetch(githubTeam)
@@ -28,7 +22,6 @@
         .catch((err) => console.error(err))
 </script>
 <div class="bg-white">
-    <div class="sticky top-0 left-0 h-16 bg-brand-blue-dark z-10"></div>
     <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div class="space-y-12">
             <div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
