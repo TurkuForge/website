@@ -16,7 +16,7 @@ Either way, we are here to help one another and make sure we build something wor
 ## Our story
 
 Back in December 2020, a
-<a href="https://www.urbandictionary.com/define.php?term=padawan" target="_blank">young padawan</a>
+<a href="https://www.urbandictionary.com/define.php?term=padawan" rel="noreferrer" target="_blank">young padawan</a>
 wrote a message on the local meetup group slack (Turku Loves Frontend)
 
 > Hello everyone, I got this idea in my head that I want to start a hobby project,
