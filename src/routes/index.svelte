@@ -74,13 +74,14 @@
 	<section bind:this={sections.team} id="team" class="w-screen relative w-full">
 		<Team />
 	</section>
-	<footer class="bg-brand-dark" aria-labelledby="footerHeading">
+	<footer class="bg-brand-dark">
 		<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
 			<div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
 				<div class="flex space-x-6 md:order-2">
 					<a
 						href="https://github.com/TurkuForge"
 						target="_blank"
+						rel="noreferrer"
 						class="text-gray-400 hover:text-gray-300"
 					>
 						<span class="sr-only">GitHub</span>
@@ -95,6 +96,7 @@
 					<a
 						href="https://twitter.com/TurkuForge"
 						target="_blank"
+						rel="noreferrer"
 						class="text-gray-400 hover:text-gray-300"
 					>
 						<span class="sr-only">Twitter</span>
