@@ -4,69 +4,69 @@
 @tailwind utilities;
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-	background-color: theme('colors.brand-blue-dark');
+  background-color: theme('colors.brand-blue-dark');
 }
 
 .grid-container {
-	transform: perspective(200px) rotateX(40deg) scale(2, 1) translateZ(0);
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+  transform: perspective(200px) rotateX(40deg) scale(2, 1) translateZ(0);
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .grid-container:before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	box-shadow: inset 0 400px 400px 150px #1f2833;
-	z-index: 3;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-shadow: inset 0 400px 400px 150px #1f2833;
+  z-index: 3;
 }
 
 .grid-container:before,
 .grid-container:after {
-	height: 200vh;
+  height: 200vh;
 }
 
 .grid-container:after {
-	content: '';
-	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	padding: 10px;
-	outline: 1px solid transparent;
-	transform-origin: bottom center;
-	will-change: transform;
-	animation-name: tgrid;
-	animation-duration: 0.7s;
-	animation-delay: 0s;
-	animation-fill-mode: forwards;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  outline: 1px solid transparent;
+  transform-origin: bottom center;
+  will-change: transform;
+  animation-name: tgrid;
+  animation-duration: 0.7s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
 .grid-container:after {
-	background-position: center bottom;
-	background-size: 220px 220px;
-	background-image: linear-gradient(to right, theme('colors.brand-blue') 2px, transparent 2px),
-		linear-gradient(to bottom, theme('colors.brand-blue') 4px, transparent 4px);
+  background-position: center bottom;
+  background-size: 220px 220px;
+  background-image: linear-gradient(to right, theme('colors.brand-blue') 2px, transparent 2px),
+    linear-gradient(to bottom, theme('colors.brand-blue') 4px, transparent 4px);
 }
 
 @keyframes tgrid {
-	0% {
-		transform: translate3d(0, 0, 0);
-	}
-	100% {
-		transform: translate3d(0, 220px, 0);
-	}
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 220px, 0);
+  }
 }
