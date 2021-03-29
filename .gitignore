@@ -1,7 +1,6 @@
-/node_modules/
-/public/build/
-/cert/
-
-.DS_Store
 .idea
-.vscode
+.DS_Store
+node_modules
+/.svelte
+/build
+/functions

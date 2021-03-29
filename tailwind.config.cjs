@@ -1,17 +1,10 @@
-const production = !process.env.ROLLUP_WATCH;
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: {
-    content: [
-      "./src/**/*.svelte",
-      "./public/**/*.html"
-    ],
-    enabled: production // Disable purge in dev
-  },
+  purge: ['./src/**/*.svelte'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    colors:  {
+    colors: {
       'brand-blue': '#45A29E',
       'brand-blue-light': '#66FCF1',
       'brand-blue-dark': '#1f2833',
@@ -20,17 +13,17 @@ module.exports = {
       ...colors
     },
     fontFamily: {
-      'logo': [ 'Bungee' ],
-      'open-sans': [ 'Open Sans' ]
+      logo: ['Bungee'],
+      'open-sans': ['Open Sans']
     },
-    extend: {},
+    extend: {}
   },
   variants: {
-    extend: {},
+    extend: {}
   },
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-}
+    require('@tailwindcss/aspect-ratio')
+  ]
+};
