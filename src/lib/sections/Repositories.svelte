@@ -16,7 +16,12 @@
     if (typeof date === 'string') {
       date = new Date(date);
     }
-    let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    let options: Intl.DateTimeFormatOptions = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
     return date.toLocaleDateString(locale, options);
   }
 

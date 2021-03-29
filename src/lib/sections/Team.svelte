@@ -1,8 +1,14 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  interface Member {
+    avatar_url: string;
+    name: string;
+    bio: string;
+    twitter_username?: string;
+  }
 
   const githubTeam = 'https://api.github.com/orgs/TurkuForge/public_members';
-  let data = [];
+  let data: Member[] = [];
   onMount(() => {
     fetch(githubTeam)
       .then(async (response) => {
@@ -14,10 +20,10 @@
 
         return Promise.all(requests);
       })
-      .then(async ([...members]) => {
+      .then((members) => {
         members.forEach((member) => {
           member.json().then((content) => {
-            data = data.concat([content]);
+            data = [...data, content];
           });
         });
       })
